@@ -1,12 +1,16 @@
 module.exports = {
     "env": {
-        "browser": true,
-        "es2021": true
+        es2021: true,
+        node: true,
+        jest: true,
     },
     "extends": [
         "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
     ],
     "overrides": [
         {
@@ -24,28 +28,23 @@ module.exports = {
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "@typescript-eslint/parser"
     },
     "plugins": [
         "@typescript-eslint",
-        "react"
+        "react", "react-hooks",
     ],
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ]
+        "indent": ["error", 2, { SwitchCase: 1 }],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "double", { avoidEscape: true }],
+        "semi": ["error", "always"],
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "react/display-name": "off",
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/no-unescaped-entities": "off",
     }
 }
