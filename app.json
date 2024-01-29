@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "name": "aurora-note",
+    "slug": "aurora-note",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
