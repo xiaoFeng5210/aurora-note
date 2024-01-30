@@ -3,13 +3,14 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-nat
 import { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
+import { ANButton } from "@/components/ui";
 
 const Home = () => {
   const router = useRouter();
   return (
     <SafeAreaView className="flex-1 justify-center items-center">
-      <Text className="text-2xl">Home</Text>
-      <Button title="开始" onPress={() => router.push("/(tabs)")}></Button>
+      <Text style={{ fontSize: wp(8) }}>Home</Text>
+      <ANButton type="primary" onPress={() => router.push("/(tabs)")}>开始</ANButton>
     </SafeAreaView>
   );
 };
