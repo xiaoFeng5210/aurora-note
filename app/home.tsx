@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 
-const test = () => {
+const Home = () => {
   const router = useRouter();
   return (
     <SafeAreaView style={styles.container}>
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
     alignItems:'center'
   },
 })
-export default test;
+export default Home;
