@@ -7,19 +7,10 @@ import { useRouter } from "expo-router";
 const Home = () => {
   const router = useRouter();
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Home</Text>
-      <Button title="开始" onPress={() => router.push('/(tabs)')}></Button>
+    <SafeAreaView className="flex-1 justify-center items-center">
+      <Text className="text-2xl">Home</Text>
+      <Button title="开始" onPress={() => router.push("/(tabs)")}></Button>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems:'center'
-  },
-})
 export default Home;
